@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Page</title>
+    <style>
+        /* General Layout Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            border-bottom: 1px solid #ddd;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header .logo {
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            font-family:'Times New Roman', Times, serif;
+        }
+
+        /* Top Recipes Section Styling */
+        .top-recipes {
+            text-align: center;
+            margin-top: 25px;
+            padding: 25px;
+            background-color: #f2f2f2;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .top-recipes .recipe-gallery {
+            display: flex;
+            justify-content:center;
+            gap:20px;
+            margin-top: 10px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        /* Main Categories Section Styling */
+        .main-categories {
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            text-align: left;
+            margin-top: 25px;
+            margin-left: 10px;
+            margin-right: 10px;
+            padding: 20px;
+            background-color: #f2f2f2;
+            align-content: center;
+        }
+
+        .main-categories ul {
+            list-style-type:disc;
+            color: #31605a;
+            padding: 2px;
+            margin-left: 15px;
+        }
+
+        .main-categories .nested-ul{
+            list-style-type: disc;
+            color: #31605a;
+            padding: 0px;
+            margin-left: 35px;
+        }
+
+        .main-categories li {
+            margin-bottom: 10px;
+            color: #31605a;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .main-categories a {
+            text-decoration: none;
+            color: #31605a;
+            font-size: 16px;
+            font-weight: normal;
+            margin-left: 25px;
+        }
+
+
+        .category-item {
+           
+            cursor:default;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
+
+        
+
+        /* Sub Categories Section Styling */
+        .sub-categories {
+            text-align: left;
+            margin-top: 25px;
+            padding: 20px;
+            background-color: #f2f2f2;
+            margin-left: 10px;
+            margin-right: 10px;
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+        }
+
+        .sub-categories .nested-ul{
+            list-style-type: disc;
+            color: #31605a;
+            padding: 2px;
+            margin-left: 35px;
+        }
+
+        .sub-categories ul {
+            list-style-type:disc;
+            padding: 2px;
+            color: #31605a;
+            margin-left: 15px;
+        }
+
+        .sub-categories li {
+            margin-bottom: 10px;
+            color: #31605a;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .sub-categories a {
+            text-decoration: none;
+            color: #31605a;
+            font-size: 16px;
+            font-weight: normal;
+            margin-left: 25px;
+            
+        }
+
+        .sub-category-item {
+            cursor: default;
+            font-family: Georgia, 'Times New Roman', Times, serif;;
+        }
+
+
+        /* Styling for dropdown items */
+        .top-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            border-bottom: 1px solid #ddd;
+            margin-top: 5px;
+            margin-left: 2px;
+            margin-right: 2px;
+        }
+
+        .top-logo {
+            font-size: 32px;
+            font-family: "Georgia", serif;
+            font-weight: bold;
+            color: #28553c;
+        }
+
+        .top-header-nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .top-header-nav-links a {
+            text-decoration: none;
+            font-family: "Georgia", serif;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            text-transform: uppercase;
+        }
+
+        .top-header-nav-links a:hover {
+            color: #412730;
+        }
+
+        .top-recipes a {
+            display: inline-block;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .top-recipes img {
+            width: 290px;
+            height: 390px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .top-recipes p {
+            margin-top: 1px;
+            font-size: 20px;
+            font-weight: normal;
+            font-family: 'Times New Roman', Times, serif;
+            letter-spacing: 2px;
+            color: #fff;
+            background-color: #5c8692;
+            padding: 3px;
+            border-radius: 4px;
+            display: inline-block;
+            max-width: 270px;
+            text-align: center;
+            width:270px;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: #31605a;
+            color: #fff;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        /*new*/
+        .top-rated {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            padding: 50px;
+        }
+
+        .recipe-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .recipe-card:hover {
+            transform: scale(1.05);
+        }
+
+        .recipe-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            
+        }
+
+        .recipe-card h3 {
+            padding: 15px;
+            font-size: 20px;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        /*new*/
+    </style>
+</head>
+<body>
+
+    <header class="top-header">
+        <div class="top-logo"><a href="/home.html" target="_blank" style="color: #31605a; text-decoration: none;">it's cooking...</a></div>
+        
+        <nav class="top-header-nav-links">
+            <a href="home.html">Home</a>
+            <a href="recipes.html">Recipes</a>
+            <a href="signup.html">Signup</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="recipes" style="background-color: rgb(241,239,236);"> 
+            
+            
+            <!--new top reipces-->
+                <div class="top-rated">
+                    <h2>Top Rated Recipes</h2>
+                </div>
+                <div class="recipe-grid">
+                    <a href="air-fry-chicken-breast.html" class="recipe-card">
+                        <img src="https://i.pinimg.com/474x/9a/57/2a/9a572a2c160e3759556c0bf995c33cf0.jpg"
+                            alt="Air Fried Chicken Breast">
+                        <h3>Air Fried Chicken Breast</h3>
+                    </a>
+                    <a href="strawberry-shortcut-yogurt-bowls.html" class="recipe-card">
+                        <img src="https://pinchofyum.com/wp-content/uploads/Strawberry-Shortcake-Yogurt-Bowls-960x1440.jpg"
+                            alt="Strawberry Yogurt Bowls">
+                        <h3>Strawberry Yogurt Bowls</h3>
+                    </a>
+                    <a href="chocolate-chip-ccokies.html" class="recipe-card">
+                        <img src="https://i.pinimg.com/474x/12/f2/2e/12f22edb6547a8994c8f651985b458fa.jpg"
+                            alt="Chocolate Chip Cookies">
+                        <h3>Chocolate Chip Cookies</h3>
+                    </a>
+                    <a href="paprika-chicken-pasta.html" class="recipe-card">
+                        <img src="https://pinchofyum.com/wp-content/uploads/Paprika-Chicken-Pasta-960x1440.jpg"
+                            alt="Oatmilk Honey Latte">
+                        <h3>Paprika Chicken Pasta</h3>
+                    </a>
+                </div>
+    
+            <!--new top recipes-->
+        </section>
+
+        <section class="main-categories">
+            <h2>Meal Type</h2>
+            <ul class="category-item">
+                <li>Appetizers</li>
+                    
+                    <ul class="nested-ul">
+                        <li><a href="raw-vegan-carrot-cake-bites.html" target="_blank">Raw vegan carrot cake bites</a></li>
+                        <li><a href="strawberry-shortcut-yogurt-bowls.html" target="_blank">Strawberry shortcake yogurt bowls</a></li>
+                    </ul>
+                
+               
+                <li>Main Course</li>
+                    
+                    <ul class="nested-ul">
+                        <li><a href="air-fry-chicken-breast.html">Air Fry Chicken Breast</a></li>
+                        <li><a href="carrot-soup.html">Carrot Soup</a></li>
+                        <li><a href="coconut-tandoori-inspired-chicken.html">Coconut Chicken Tandoori</a></li>
+                        <li><a href="paprika-chicken-pasta.html">Paprika Chicken Pasta</a></li>
+                    </ul>
+              
+                
+
+
+                <li>Desserts</li>
+                    
+                    <ul class="nested-ul">
+                        <li><a href="raw-vegan-carrot-cake-bites.html">Raw vegan carrot cake bites</a></li>
+                        <li><a href="chocolate-chip-cookies.html">Chocolate Chip Cookies</a></li>
+                    </ul>
+                    
+                
+
+
+                <li>Drinks</li>
+                    
+                    <ul class="nested-ul">
+                        <li><a href="oatmilk-honey-latte.html">Oatmilk Honey Latte</a></li>
+                    </ul>
+                    
+            
+            </ul>
+        </section>
+    
+        <section class="sub-categories">
+            <h2>All Categories</h2>
+            <ul class="sub-category-item">
+                <li >Quick & Easy</li>
+                    <ul class="nested-ul">
+                        <li><a href="air-fry-chicken-breast.html">Air fry chicken breast</a></li>
+                        <li><a href="carrot-soup.html">Carrot soup</a></li>
+                        <li><a href="paprika-chicken-pasta.html">Paprika chicken pasta</a></li>
+                        <li><a href="strawberry-shortcut-yogurt-bowls.html">Strawberry shortcake yogurt bowls</a></li>
+                    </ul>
+
+                <li>Breakfast</li>
+                    <ul class="nested-ul">
+                        <li><a href="raw-vegan-carrot-cake-bites.html">Raw vegan carrot cake bites</a></li>
+                    </ul>
+                <li>Pasta</li>
+                    <ul class="nested-ul">
+                        <li><a href="paprika-chicken-pasta.html">Paprika chicken pasta</a></li>
+                    </ul>
+                <li>Soups</li>
+                    <ul class="nested-ul">
+                        <li><a href="carrot-soup.html">Carrot soup</a></li>
+                    </ul>
+                <li>Vegan</li>
+                    <ul class="nested-ul">
+                        <li><a href="carrot-soup.html">Carrot soup</a></li>
+                        <li><a href="raw-vegan-carrot-cake-bites.html">Raw vegan carrot cake bites</a></li>
+                    </ul>
+                <li>Instant Pot</li>
+                    <ul class="nested-ul">
+                        <li><a href="air-fry-chicken-breast.html">Air fry chicken breast</a></li>
+                        <li><a href="carrot-soup.html">Carrot soup</a></li>
+                        <li><a href="paprika-chicken-pasta.html">Paprika chicken pasta</a></li>
+                        <li><a href="coconut-tandoori-inspired-chicken.html">Coconut tandoori inspired</a></li>
+                    </ul>
+                <li>Desserts</li>
+                    <ul class="nested-ul">
+                        <li><a href="chocolate-chip-cookies.html">Chocolate chip cookie</a></li>
+                        <li><a href="raw-vegan-carrot-cake-bites.html">Raw vegan carrot cake bites</a></li>
+                    </ul>
+                <li>Drinks</li>
+                    <ul class="nested-ul">
+                        <li><a href="oatmilk-honey-latte.html">Oatmilk honey latte</a></li>
+                    </ul>
+            </ul>
+        </section>
+        
+    </main>
+    <div class="footer">
+        <p>It's Cooking...</p>
+    </div>
+
+
+    
+</body>
+</html>

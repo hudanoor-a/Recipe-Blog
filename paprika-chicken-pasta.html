@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soft Chocolate Chip Cookies</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        /* Container Styling */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Left Section (Navigation Bar) */
+        .left-section {
+            flex: 0.3;
+            padding-right: 20px;
+            background-color: #f2f2f2;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        /* Right Section (Content Area) */
+        .right-section {
+            flex: 0.7;
+            padding-left: 20px;
+           
+        }
+
+        /* Heading and Navigation Links */
+        h1 {
+            color: #31605a;
+            font-size: 36px;
+            margin-bottom: 10px;
+            font-family: 'Georgia', serif;
+        }
+
+        h2 {
+            color: #412730;
+            font-size: 28px;
+            margin-bottom: 15px;
+            font-weight: normal;
+            font-family: 'Georgia', serif;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin-bottom: 10px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #31605a;
+            font-weight: bold;
+            font-size: 18px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .nav-links a:hover {
+            color: #542937;
+        }
+
+        /* Image Styling */
+        .recipe-image {
+            width: 100%; /* Ensures the image takes the full width of its container */
+            max-width: 600px; /* Limits the image width to 600px, you can adjust this value */
+            height: auto; /* Keeps the aspect ratio intact */
+            border-radius: 8px; /* Optional: rounded corners for the image */
+            margin-bottom: 20px;
+        }
+
+        /* Ingredients and Recipe Section */
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: #31605a;
+            font-size: 24px;
+        }
+
+        .ingredients-list ul {
+            list-style-type:square;
+            padding-left: 20px;
+        }
+
+        .ingredients-list li {
+            margin-bottom: 8px;
+        }
+
+        .recipe-steps p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        /* Footer Styling */
+        .footer {
+            text-align: center;
+            background-color: #31605a;
+            color: #fff;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between; /* Aligns logo left, links right */
+            align-items: center; /* Centers items vertically */
+            padding: 20px 50px; /* Adds spacing */
+            border-bottom: 1px solid #ddd; /* Adds a subtle line below */
+            margin-top: 5px;
+            margin-left: 2px;
+            margin-right: 2px;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-family: "Georgia", serif;
+            font-weight: bold;
+            color: #28553c;
+        }
+        .header-nav-links {
+            display: flex;
+            gap: 30px; /* Space between links */
+        }
+
+        .header-nav-links a {
+            text-decoration: none;
+            font-family: "Georgia", serif;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            text-transform: uppercase; /* Makes text uppercase */
+        }
+
+        /* Add hover effect */
+        .header-nav-links a:hover {
+            color: #412730;
+        }
+        .video-container iframe {
+            width: 100%;  /* Ensures the video takes the full width of the container */
+            height: 400px; /* Set a fixed height for the video */
+            border-radius: 8px;  /* Optional: rounded corners for the video */
+            margin-bottom: 20px; /* Space between video and next section */
+        }
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo"><a href="/home.html" target="_blank" style="color: #31605a; text-decoration: none;">it's cooking...</a></div>
+        
+        <nav class="header-nav-links">
+            <a href="home.html">Home</a>
+            <a href="recipes.html">Recipes</a>
+            <a href="signup.html">Signup</a>
+        </nav>
+    </header>
+    <div class="container">
+        <!-- Left Section (Navigation Bar) -->
+        <div class="left-section">
+            <h2>Go To</h2>
+            <ul class="nav-links">
+                <li><a href="#video">Video</a></li>
+                <li><a href="#ingredients">Ingredients</a></li>
+                <li><a href="#recipe">Recipe</a></li>
+            </ul>
+        </div>
+
+        <!-- Right Section (Content Area) -->
+        <div class="right-section">
+            <h1>Paprika Chicken Pasta</h1>
+            <img src="https://pinchofyum.com/wp-content/uploads/Paprika-Chicken-Pasta-960x1440.jpg" alt="Dish Image" class="recipe-image">
+            <div id="video" class="video-container">
+                <!-- Added this iframe for video -->
+                <iframe width="100%" height="auto" src="https://www.youtube.com/embed/g4nfD5s7N2w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <!-- Ingredients Section -->
+            <div id="ingredients" class="section">
+                <h2>Ingredients</h2>
+                <div class="ingredients-list">
+                    <ul>
+                        <li>1 pound chicken breasts</li>
+
+                        <li>1 tablespoon olive oil</li>
+
+                        <li>a pinch of paprika, garlic powder, onion powder, salt</li>
+
+                        <li>Pasta</li>
+
+                        <li>2 tablespoons butter</li>                 
+
+                        <li>4 cloves garlic, minced</li>     
+
+                        <li>2 tablespoons flour</li>
+
+                        <li>1 1/2 cup chicken broth</li>
+
+                        <li>2 teaspoons paprika</li>
+
+                        <li>1/4 – 1/2 cup heavy cream</li>
+
+                        <li>1 teaspoon kosher salt</li>
+
+                        <li>squeeze of lemon juice</li>
+
+                        
+                         
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Recipe Section -->
+            <div id="recipe" class="section">
+                <h2>Recipe</h2>
+                <div class="recipe-steps">
+                    <p>1. Preheat the oven to 450 degrees. </p>
+
+                    <p>2. Fill a medium bowl with lukewarm water. Sprinkle some salt in. Soak the chicken breasts in the salted water for 15 minutes. </p>
+
+                    <p>3. Pat the chicken dry. Transfer to a baking dish. Drizzle with olive oil. Sprinkle thoroughly with paprika, garlic powder, and salt. Bake for 15 minutes or until cooked through. Let the chicken rest before slicing.</p>
+
+                    <p>4.   Cook pasta to package directions. Toss with oil and set aside.</p>
+
+                    <p>5. Melt the butter in a skillet over medium heat. Add the garlic; saute for about 2 minutes. Add the flour; cook for about 2 minutes. Add the wine; stir and let it sizzle out. Add the broth, a little at a time, stirring between each addition. Add the paprika and the cream. Stir until bubbly and creamy enough to coat the back of a spoon. Season to taste with salt and lemon juice.</p>
+
+                    <p>6. Toss the pasta with the creamy sauce. Arrange a sliced chicken breast on top. Sprinkle with parsley or red pepper flakes.</p>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>It's Cooking...</p>
+    </div>
+
+</body>
+</html>

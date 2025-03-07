@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coconut Tandoori Inspired Chicken</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        /* Container Styling */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Left Section (Navigation Bar) */
+        .left-section {
+            flex: 0.3;
+            padding-right: 20px;
+            background-color: #f2f2f2;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        /* Right Section (Content Area) */
+        .right-section {
+            flex: 0.7;
+            padding-left: 20px;
+           
+        }
+
+        /* Heading and Navigation Links */
+        h1 {
+            color: #31605a;
+            font-size: 36px;
+            margin-bottom: 10px;
+            font-family: 'Georgia', serif;
+        }
+
+        h2 {
+            color: #412730;
+            font-size: 28px;
+            margin-bottom: 15px;
+            font-weight: normal;
+            font-family: 'Georgia', serif;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin-bottom: 10px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #31605a;
+            font-weight: bold;
+            font-size: 18px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .nav-links a:hover {
+            color: #542937;
+        }
+
+        /* Image Styling */
+        .recipe-image {
+            width: 100%; /* Ensures the image takes the full width of its container */
+            max-width: 600px; /* Limits the image width to 600px, you can adjust this value */
+            height: auto; /* Keeps the aspect ratio intact */
+            border-radius: 8px; /* Optional: rounded corners for the image */
+            margin-bottom: 20px;
+        }
+
+        /* Ingredients and Recipe Section */
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: #31605a;
+            font-size: 24px;
+        }
+
+        .ingredients-list ul {
+            list-style-type:square;
+            padding-left: 20px;
+        }
+
+        .ingredients-list li {
+            margin-bottom: 8px;
+        }
+
+        .recipe-steps p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        /* Footer Styling */
+        .footer {
+            text-align: center;
+            background-color: #31605a;
+            color: #fff;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between; /* Aligns logo left, links right */
+            align-items: center; /* Centers items vertically */
+            padding: 20px 50px; /* Adds spacing */
+            border-bottom: 1px solid #ddd; /* Adds a subtle line below */
+            margin-top: 5px;
+            margin-left: 2px;
+            margin-right: 2px;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-family: "Georgia", serif;
+            font-weight: bold;
+            color: #28553c;
+        }
+        .header-nav-links {
+            display: flex;
+            gap: 30px; /* Space between links */
+        }
+
+        .header-nav-links a {
+            text-decoration: none;
+            font-family: "Georgia", serif;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            text-transform: uppercase; /* Makes text uppercase */
+        }
+
+        /* Add hover effect */
+        .header-nav-links a:hover {
+            color: #412730;
+        }
+        .video-container iframe {
+            width: 100%;  /* Ensures the video takes the full width of the container */
+            height: 400px; /* Set a fixed height for the video */
+            border-radius: 8px;  /* Optional: rounded corners for the video */
+            margin-bottom: 20px; /* Space between video and next section */
+        }
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo"><a href="/home.html" target="_blank" style="color: #31605a; text-decoration: none;">it's cooking...</a></div>
+        
+        <nav class="header-nav-links">
+            <a href="home.html">Home</a>
+            <a href="recipes.html">Recipes</a>
+            <a href="signup.html">Signup</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Left Section (Navigation Bar) -->
+        <div class="left-section">
+            <h2>Go To</h2>
+            <ul class="nav-links">
+                <li><a href="#video">Video</a></li>
+                <li><a href="#ingredients">Ingredients</a></li>
+                <li><a href="#recipe">Recipe</a></li>
+            </ul>
+        </div>
+
+        <!-- Right Section (Content Area) -->
+        <div class="right-section">
+            <h1>Coconut Tandoori-Inspired Chicken</h1>
+            <img src="https://pinchofyum.com/wp-content/uploads/Coconut-Tandoori-Chicken-with-Rice-960x1440.jpg" alt="Dish Image" class="recipe-image">
+            
+            <div id="video" class="video-container">
+                <!-- Added this iframe for video -->
+                <iframe width="100%" height="auto" src="https://www.youtube.com/embed/Gr-dsvu5-Uc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <!-- Ingredients Section -->
+            <div id="ingredients" class="section">
+                <h2>Ingredients</h2>
+                <div class="ingredients-list">
+                    <ul>
+                        <li>2 pounds boneless skinless chicken thighs</li>
+
+                        <li>2 tablespoons honey</li>
+
+                        <li>2 tablespoons garam masala</li>
+
+                        <li>1 tablespoon chili powder</li>
+
+                        <li>1 tablespoon garlic powder</li>                 
+
+                        <li>1 tablespoon cumin</li>     
+
+                        <li>2 teaspoons salt</li>
+
+                        <li>2 teaspoons turmeric</li>
+
+                        <li>1/2 teaspoon ground ginger</li>
+
+                        <li>1/2 teaspoon cayenne pepper</li>
+
+                        <li>14-ounce can coconut milk</li>
+
+                        <li>2 cups rice, uncooked</li>
+                         
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Recipe Section -->
+            <div id="recipe" class="section">
+                <h2>Recipe</h2>
+                <div class="recipe-steps">
+                    <p>1. Cook rice according to package instructions.</p>
+
+                    <p>2. Mix everything together in a freezer-friendly bag or container. Place in the freezer and store up to three months. When you’re ready to cook, follow the directions below!</p>
+
+                    <p>3. Add everything to the Instant Pot. If it’s thawed, cook for 5 minutes manual high pressure + 10 minutes for natural release. If it’s frozen, cook for 15 minutes manual high pressure + 10 minutes natural release. Shred and serve over rice!</p>
+
+                    <p>4.  Add everything to the slow cooker. If it’s thawed, cook for 4 hours on high, or 6 hours on low. If it’s frozen, cook for 6 hours on high. Shred and serve over rice!</p>
+
+                    <p>5. Combine the garam masala, chili powder, garlic powder, cumin, salt, turmeric, ginger, and cayenne pepper in a small dish. Heat 1 tablespoon of oil in a large skillet over medium heat. Add in the chicken thighs. Season the chicken with the spice mixture. Cook for a minute or two on each side. Add in the honey and coconut milk. Cover the skillet and simmer on low for 45 minutes until the chicken is fork tender and can be easily shredded.</p>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>It's Cooking...</p>
+    </div>
+
+</body>
+</html>

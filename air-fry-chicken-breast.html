@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Fry Chicken Breast</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        /* Container Styling */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Left Section (Navigation Bar) */
+        .left-section {
+            flex: 0.3;
+            padding-right: 20px;
+            background-color: #f2f2f2;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        /* Right Section (Content Area) */
+        .right-section {
+            flex: 0.7;
+            padding-left: 20px;
+           
+        }
+
+        /* Heading and Navigation Links */
+        h1 {
+            color: #31605a;
+            font-size: 36px;
+            margin-bottom: 10px;
+            font-family: 'Georgia', serif;
+        }
+
+        h2 {
+            color: #412730;
+            font-size: 28px;
+            margin-bottom: 15px;
+            font-weight: normal;
+            font-family: 'Georgia', serif;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin-bottom: 10px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #31605a;
+            font-weight: bold;
+            font-size: 18px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .nav-links a:hover {
+            color: #542937;
+        }
+
+        /* Image Styling */
+        .recipe-image {
+            width: 100%; /* Ensures the image takes the full width of its container */
+            max-width: 600px; /* Limits the image width to 600px, you can adjust this value */
+            height: auto; /* Keeps the aspect ratio intact */
+            border-radius: 8px; /* Optional: rounded corners for the image */
+            margin-bottom: 20px;
+        }
+
+        /* Ingredients and Recipe Section */
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: #31605a;
+            font-size: 24px;
+        }
+
+        .ingredients-list ul {
+            list-style-type:square;
+            padding-left: 20px;
+        }
+
+        .ingredients-list li {
+            margin-bottom: 8px;
+        }
+
+        .recipe-steps p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        /* Footer Styling */
+        .footer {
+            text-align: center;
+            background-color: #31605a;
+            color: #fff;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between; /* Aligns logo left, links right */
+            align-items: center; /* Centers items vertically */
+            padding: 20px 50px; /* Adds spacing */
+            border-bottom: 1px solid #ddd; /* Adds a subtle line below */
+            margin-top: 5px;
+            margin-left: 2px;
+            margin-right: 2px;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-family: "Georgia", serif;
+            font-weight: bold;
+            color: #28553c;
+        }
+        .header-nav-links {
+            display: flex;
+            gap: 30px; /* Space between links */
+        }
+
+        .header-nav-links a {
+            text-decoration: none;
+            font-family: "Georgia", serif;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            text-transform: uppercase; /* Makes text uppercase */
+        }
+
+        /* Add hover effect */
+        .header-nav-links a:hover {
+            color: #412730;
+        }
+        .video-container iframe {
+            width: 100%;  /* Ensures the video takes the full width of the container */
+            height: 400px; /* Set a fixed height for the video */
+            border-radius: 8px;  /* Optional: rounded corners for the video */
+            margin-bottom: 20px; /* Space between video and next section */
+        }
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo"><a href="/home.html" target="_blank" style="color: #31605a; text-decoration: none;">it's cooking...</a></div>
+        
+        <nav class="header-nav-links">
+            <a href="home.html">Home</a>
+            <a href="recipes.html">Recipes</a>
+            <a href="signup.html">Signup</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Left Section (Navigation Bar) -->
+        <div class="left-section">
+            <h2>Go To</h2>
+            <ul class="nav-links">
+                <li><a href="#video">Video</a></li>
+                <li><a href="#ingredients">Ingredients</a></li>
+                <li><a href="#recipe">Recipe</a></li>
+            </ul>
+        </div>
+
+        <!-- Right Section (Content Area) -->
+        <div class="right-section">
+            <h1>Air Fryer Chicken Breast</h1>
+            <img src="https://i.pinimg.com/474x/9a/57/2a/9a572a2c160e3759556c0bf995c33cf0.jpg" alt="Dish Image" class="recipe-image">
+            
+            <div id= "video" class="video-container">
+                <!-- Added this iframe for video -->
+                <iframe width="100%" height="auto" src="https://www.youtube.com/embed/EL-Y3MXEUS0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <!-- Ingredients Section -->
+            <div id="ingredients" class="section">
+                <h2>Ingredients</h2>
+                <div class="ingredients-list">
+                    <ul>
+                        <li>1 teaspoon paprika</li>
+
+                        <li>1/4 teaspoon smoked paprika</li>
+
+                        <li>1/2 teaspoon garlic powder</li>
+
+                        <li>1/2 teaspoon onion powder</li>
+
+                        <li>3/4 teaspoon salt (I use Morton table salt for this because it’s fine and better for coating)</li>                 
+
+                        <li>1 1/2 teaspoons brown sugar</li>     
+
+                        <li>1 teaspoon cornstarch</li>
+
+                        <li>2 teaspoons avocado oil</li>
+
+                        <li> pound boneless skinless chicken breasts – if you have closer to 1.5 pounds in your package, increase the amount of spices above by 1.5x to make sure you have enough seasoning for your chicken</li>
+                         
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Recipe Section -->
+            <div id="recipe" class="section">
+                <h2>Recipe</h2>
+                <div class="recipe-steps">
+                    <p>1. <b>Cut the the chicken into thin pieces:</b>  Cut each chicken breast into thin, flat pieces (not bite-sized but something that looks like a thin chicken breast). For example: if a one-pound package gives me two chicken breasts, I’m often cutting it into 3-4 thin pieces per breast. Thin chicken is essential! And delicious! Pat the chicken breasts dry if they have a lot of moisture on them</p>
+
+                    <p>2. <b>Coat the chicken with spices:</b>  Toss the spices together so they’re mixed well; sprinkle mixture over the chicken pieces in a bowl. Add the oil and toss (I use my hands but tongs will work). You want to thoroughly coat the chicken. You can give it a short rest if you want, but I find that the flavor is excellent even if it just goes straight into the air fryer, and that’s how I usually make it</p>
+
+                    <p>3. <b>Air fry:</b>   Preheat the air fryer. Place the chicken on the air fryer basket / grate in an even layer, leaving a bit of space for air to circulate around. Air fry the chicken at 415 degrees for 10 minutes. If you have larger pieces of chicken, you’ll want to go closer to 13 minutes. You’re looking for an internal temperature of 165 degrees.</p>
+
+                    <p>4. <b>You’re done! Yum!</b>   It should be a gorgeous sight for hungry eyes. Crisped on the outside, full of flavor, and juicy to the max. Let it rest for a moment; then slice into it and enjoy. We often eat at least half of it just hot out of the air fryer while standing over the cutting board. I am on a kick with dunking the chicken pieces in a house-made gochujang dipping sauce which is in the notes below!</p>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>It's Cooking...</p>
+    </div>
+
+</body>
+</html>
